@@ -70,7 +70,7 @@ module.exports = {
   generateSupportCharacter() {
     species = this.shuffle(species)
     let race = species[0]
-    let gender = this.shuffle(["Female", "Male"])[0]
+    let gender = this.shuffle(["Female", "Male", "Non-binary"])[0]
     let firstName = this.shuffle(race[gender])[0]
     let lastName = this.shuffle(race["Family"])[0]
 

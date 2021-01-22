@@ -36,6 +36,18 @@
         "Talents": ["EMPATH", "TELEPATH"]
     },
     {
+        "Name": "Borg",
+        "Female": [""],
+        "Male": [""],
+        "Family": [""],
+        "AttributeBonus": {
+            "Insight": 1,
+            "Presence": 1,
+            "Reason": 1
+        },
+        "Talents": [""]
+    },
+    {
         "Name": "Denobulan",
         "Female": ["Anari", "Andora", "Asha", "Daphina", "Feezal", "Forliza", "Kessil", "Liera", "Lusis", "Miral", "Natala", "Ninsen", "Henna", "Sabra", "Secka", "Symmé", "Trevis", "Vesena"],
         "Male": ["Biras", "Bogga", "Delix", "Grolik", "Groznik", "Nettus", "Moga", "Morox", "Phlox", "Rinix", "Takis", "Tropp", "Tuglian", "Vinku", "Yolen", "Zepht", "Zinet"],

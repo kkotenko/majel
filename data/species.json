@@ -68,7 +68,7 @@
         "Genders": ["Male", "Female", "Non-binary"],
         "Female": ["Olivia", "Emma", "Ava", "Sophia", "Isabella", "Charlotte", "Amelia", "Mia", "Harper", "Evelyn", "Abigail", "Emily", "Ella", "Camila", "Luna", "Sofia", "Avery", "Mila"],
         "Male": ["Liam", "Noah", "Oliver", "William", "Elijah", "James", "Benjamin", "Lucas", "Mason", "Ethan", "Alexander", "Henry", "Jacob", "Michael", "Daniel", "Logan", "Jackson"],
-        "Non-binary": [""],
+        "Non-binary": ["Alex", "Avery", "Dylan", "Charlie", "River", "Sasha", "Ivory", "Jaylen", "Jay", "Chidi", "Nana", "Farah", "Rayan", "Elia", "Rani", "Shakti", "Rajan", "Aki", "Hikari", "Jun", "Nima", "Can", "Nur", "Thanh", "Vanja", "Lacy", "René", "Kai", "Chris"],
         "Family": ["Nguyen", "Smith", "Johnson", "Williams", "Brown", "Garcia", "Rodriguez", "Lopez", "Lee", "Jones", "Miller", "Sato", "Suzuki", "Tran", "Pak"],
         "AttributeBonus": {
             "Fitness": 1,

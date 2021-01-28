@@ -98,7 +98,7 @@
         "Genders": ["Male", "Female", "Non-binary"],
         "Female": ["Bebe", "Lunhan", "Nuzrih", "Meenhi", "Vanhul", "Midru", "Lano", "Monhaun", "Hidrid", "Yillau", "Risoh", "Laudra", "Jeso", "Rallias", "Gilluh", "Hobe", "Lonad", "Nari", "Vima", "Menod "],
         "Male": ["Vudo ", "Tejur", "Grelem ", "Gaagor ", "Erjur ", "Emblug ", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-        "Non-binary": [""],
+        "Non-binary": ["Junil"],
         "Family": ["Boraud", "Gries", "Grirrehl", "Tibex", "Niaohn", "Lam", "Bozax", "Tamar", "Rizad", "Lamun", "Runeg", "Viax", "Bisug", "Degruhl", "Berohl", "Nellaal", "Marias", "Pam", "Praain"],
         "AttributeBonus": {
             "Control": 1,

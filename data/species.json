@@ -1,6 +1,7 @@
 [
     {
         "Name": "Andorian",
+        "Genders": ["Male", "Female", "Non-binary"],
         "Female": ["Athytti", "Vryvih", "Zyle", "Vyssia", "Thriras", "Shreri", "Vrossaan", "Itamaan", "Ishrelia", "Vreraat", "Talas", "Tarah", "Jhamel", "Talla"],
         "Male": ["Ishrath", "Thoss", "Shon", "Oshrev", "Atheth", "Tyvaass", "Thasiv", "Tyssab", "Tylihr", "Thy’lek", "Shras", "Thelev", "Keval", "Gareb"],
         "Family": ["Tharhat", "Qiaqir", "Chiaqis", "Thenehr", "Zynes", "Shraviq", "Thilrerh", "Azonan", "Azollarh", "Shran"],
@@ -14,6 +15,7 @@
     },
     {
         "Name": "Bajoran",
+        "Genders": ["Male", "Female", "Non-binary"],
         "Female": ["Adami", "Chami", "Fala", "Jaxa", "Laren", "Lipras", "Leeta", "Lupaza", "Meru", "Neela", "Nerys", "Seriah", "Sul", "Yesa"],
         "Male": ["Anaphis", "Edon", "Essa", "Furel", "Gel", "Holem", "Hovath", "Kag", "Los", "Mabrin", "Nalas", "Reon", "Taban", "Tennan"],
         "Family": ["Anbara", "Anjohl", "Faren", "Jaro", "Kalem", "Krim", "Kubus", "Latara", "Latha", "Lenaris", "Li", "Tahna", "Reil"],
@@ -27,6 +29,7 @@
     },
     {
         "Name": "Betazoid",
+        "Genders": ["Male", "Female", "Non-binary"],
         "Female": ["Deanna", "Ania", "Kestra", "Lwaxanna", "Dalera", "Gloranna", "Abeana", "Pekera", "Nissila", "Lomestra", "Ioza", "Pegira", "Nemenna", "Nerira", "Lojeea"],
         "Male": ["Konal", "Reban", "Xani", "Enon", "Dael", "Etas", "Andal", "Kolel", "Atani", "Devoni", "Algar", "Jensar", "Nikael", "Kalos", "Rennan"],
         "Family": ["Grax", "Hagen", "Morganth", "Stadi", "Dutrax", "Odutan", "Nelan", "Onovren", "Kader", "Nostrun", "Dulas", "Konin", "Ebesi"],
@@ -40,6 +43,7 @@
     },
     {
         "Name": "Denobulan",
+        "Genders": ["Male", "Female", "Non-binary"],
         "Female": ["Anari", "Andora", "Asha", "Daphina", "Feezal", "Forliza", "Kessil", "Liera", "Lusis", "Miral", "Natala", "Ninsen", "Henna", "Sabra", "Secka", "Symmé", "Trevis", "Vesena"],
         "Male": ["Biras", "Bogga", "Delix", "Grolik", "Groznik", "Nettus", "Moga", "Morox", "Phlox", "Rinix", "Takis", "Tropp", "Tuglian", "Vinku", "Yolen", "Zepht", "Zinet"],
         "Family": [""],
@@ -53,6 +57,7 @@
     },
     {
         "Name": "Human",
+        "Genders": ["Male", "Female", "Non-binary"],
         "Female": ["Olivia", "Emma", "Ava", "Sophia", "Isabella", "Charlotte", "Amelia", "Mia", "Harper", "Evelyn", "Abigail", "Emily", "Ella", "Camila", "Luna", "Sofia", "Avery", "Mila"],
         "Male": ["Liam", "Noah", "Oliver", "William", "Elijah", "James", "Benjamin", "Lucas", "Mason", "Ethan", "Alexander", "Henry", "Jacob", "Michael", "Daniel", "Logan", "Jackson"],
         "Family": ["Nguyen", "Smith", "Johnson", "Williams", "Brown", "Garcia", "Rodriguez", "Lopez", "Lee", "Jones", "Miller", "Sato", "Suzuki", "Tran", "Pak"],
@@ -66,6 +71,7 @@
     },
     {
         "Name": "Tellarite",
+        "Genders": ["Male", "Female", "Non-binary"],
         "Female": ["Pagonn glasch", "Rahrunn", "Frothann", "Nenke", "Zhulish", "Cilla", "Ghaargo", "Jaro glov", "Skav", "Bloshi blasch", "Hosorg", "Befonn", "Gluraall", "Tlonkon", "Thaoto blasch", "Haave", "Wunsh", "Shurra"],
         "Male": ["Prillv", "Hirsh glov", "Gunch glov", "Thesh chim", "Zherg bav", "Dvolunn bav", "Laagagm jav", "Zallem", "Jurtak", "Shularc jav", "Cund blasch", "Xunn", "Chaanch bav", "Gullv bim", "Nullv blasch", "Caogrash", "Maalim glasch"],
         "Family": ["Zham", "Cran", "Frev", "Blom", "Call", "Fattuk", "Lotigh", "Vagarsh", "Thaattish", "Blaorsh", "Brell", "Frenn", "Fonsh", "Zhugm"],
@@ -79,6 +85,7 @@
     },
     {
         "Name": "Trill",
+        "Genders": ["Male", "Female", "Non-binary"],
         "Female": ["Bebe", "Lunhan", "Nuzrih", "Meenhi", "Vanhul", "Midru", "Lano", "Monhaun", "Hidrid", "Yillau", "Risoh", "Laudra", "Jeso", "Rallias", "Gilluh", "Hobe", "Lonad", "Nari", "Vima", "Menod "],
         "Male": ["Vudo ", "Tejur", "Grelem ", "Gaagor ", "Erjur ", "Emblug ", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
         "Family": ["Boraud", "Gries", "Grirrehl", "Tibex", "Niaohn", "Lam", "Bozax", "Tamar", "Rizad", "Lamun", "Runeg", "Viax", "Bisug", "Degruhl", "Berohl", "Nellaal", "Marias", "Pam", "Praain"],
@@ -92,6 +99,7 @@
     },
     {
         "Name": "Vulcan",
+        "Genders": ["Male", "Female", "Non-binary"],
         "Female": ["T'per", "Nang", "Les", "T'pith", "T'shith", "Avik", "T'shaannur", "Murin", "T'penes", "Nunung", "V'luk", "Meng", "T'mok", "T'rir", "Heth", "Unne", "Enan", "T'shinnaas", "V'linvas", "Imer"],
         "Male": ["Strurk", "Vo", "Liark", "Soss", "Straun", "T'Koviam", "Hypunn", "Skolleck", "Spafeck", "Salvork", "Pa", "Soth", "Hos", "Chur", "Hyk", "Sostrat", "Chovik", "Horrat", "Nelvuc", "Sevuc"],
         "Family": [""],

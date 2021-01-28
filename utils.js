@@ -95,7 +95,7 @@ module.exports = {
   generateSupportCharacter() {
     species = this.shuffle(species)
     let race = species[0]
-    let gender = this.randomElement(["Female", "Male"])
+    let gender = this.randomElement(race["Genders"])
     let firstName = this.randomElement(race[gender])
     let lastName = this.randomElement(race["Family"])
 

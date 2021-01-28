@@ -1,9 +1,13 @@
 [
     {
         "Name": "Andorian",
-        "Genders": ["Male", "Female", "Non-binary"],
+        "Genders": ["Male", "Female", "Non-binary", "zhen", "shen", "thaan", "chan"],
         "Female": ["Athytti", "Vryvih", "Zyle", "Vyssia", "Thriras", "Shreri", "Vrossaan", "Itamaan", "Ishrelia", "Vreraat", "Talas", "Tarah", "Jhamel", "Talla"],
         "Male": ["Ishrath", "Thoss", "Shon", "Oshrev", "Atheth", "Tyvaass", "Thasiv", "Tyssab", "Tylihr", "Thy’lek", "Shras", "Thelev", "Keval", "Gareb"],
+        "zhen": ["Athytti", "Vryvih", "Zyle", "Vyssia", "Thriras", "Shreri", "Vrossaan", "Itamaan", "Ishrelia", "Vreraat", "Talas", "Tarah", "Jhamel", "Talla"],
+        "shen": ["Athytti", "Vryvih", "Zyle", "Vyssia", "Thriras", "Shreri", "Vrossaan", "Itamaan", "Ishrelia", "Vreraat", "Talas", "Tarah", "Jhamel", "Talla"],
+        "thaan": ["Ishrath", "Thoss", "Shon", "Oshrev", "Atheth", "Tyvaass", "Thasiv", "Tyssab", "Tylihr", "Thy’lek", "Shras", "Thelev", "Keval", "Gareb"],
+        "chan": ["Ishrath", "Thoss", "Shon", "Oshrev", "Atheth", "Tyvaass", "Thasiv", "Tyssab", "Tylihr", "Thy’lek", "Shras", "Thelev", "Keval", "Gareb"],
         "Family": ["Tharhat", "Qiaqir", "Chiaqis", "Thenehr", "Zynes", "Shraviq", "Thilrerh", "Azonan", "Azollarh", "Shran"],
         "AttributeBonus": {
             "Daring": 1,

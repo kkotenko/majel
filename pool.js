@@ -42,10 +42,11 @@ module.exports = {
         global: {
           momentum: 0,
           threat: 0,
+          shippower: 0,
         },
       }
     }
-
+//TODO: define output
     const global = guildData.global
     // making sure global is always first to be displayed
     const embed = {
@@ -53,7 +54,7 @@ module.exports = {
       fields: [
         {
           name: "Global",
-          value: `Momentum: ${global.momentum}. Threat: ${global.threat}`,
+          value: `Momentum: ${global.momentum}. Threat: ${global.threat}. Ship power: ${global.shippower}`,
         },
       ],
     }
@@ -211,6 +212,7 @@ module.exports = {
         global: {
           momentum: 0,
           threat: 0,
+          shippower: 0,
         },
       }
     }
@@ -219,6 +221,7 @@ module.exports = {
       guildData[channelId] = {
         momentum: 0,
         threat: 0,
+        shippower: 0,
         name: msg.channel.name,
       }
     }
@@ -275,4 +278,86 @@ module.exports = {
     await redis.set(guildId, JSON.stringify(guildData))
     return embed
   },
+  async adjustShipPower(msg, option) {
+    const guildId = msg.guild.id.toString()
+    const channelId = msg.channel.id.toString()
+
+    let guildData = await redis.get(guildId)
+    if (guildData) {
+      guildData = JSON.parse(guildData)
+    }
+
+    console.warn("get redis", guildId, guildData)
+    if (!guildData || !guildData.global) {
+      console.warn("fixing guildData")
+      guildData = {
+        global: {
+          momentum: 0,
+          threat: 0,
+          shippower: 0,
+        },
+      }
+    }
+
+    if (!guildData[channelId]) {
+      guildData[channelId] = {
+        momentum: 0,
+        threat: 0,
+        shippower: 0,
+        name: msg.channel.name,
+      }
+    }
+
+    const options = option.split(" ")
+
+    let op = ""
+    if (options.length > 0) {
+      op = options[0].toLowerCase()
+      const amount = parseInt(options[1])
+      const isChannelPool =
+        options.length >= 3 && options[2].toLowerCase() === "here"
+
+      let pool = "global"
+      if (isChannelPool) {
+        pool = channelId
+      }
+
+      if (guildData[pool].shippower === null) {
+        guildData[pool].shippower = 0;
+      }
+
+      if (op === "add") {
+        guildData[pool].shippower += amount
+      } else if (op === "sub") {
+        guildData[pool].shippower -= amount
+      } else if (op === "set") {
+        guildData[pool].shippower = amount
+      }
+
+      if (guildData.global.shippower < 0 || guildData.global.shippower === null) {
+        guildData.global.shippower = 0
+      }
+      console.warn(guildData.global.shippower)
+    }
+
+    const embed = {
+      title: "Ship Power Pools",
+      color: 15844367, // 15844367 = GOLD
+      fields: [
+        {
+          name: "Global",
+          value: guildData.global.shippower,
+          inline: true,
+        },
+        {
+          name: `#${msg.channel.name}`,
+          value: guildData[channelId].shippower,
+          inline: true,
+        },
+      ],
+    }
+
+    await redis.set(guildId, JSON.stringify(guildData))
+    return embed
+  }
 }

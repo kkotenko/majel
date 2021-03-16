@@ -162,6 +162,9 @@ bot.on("message", async (message) => {
         case "t":
           embed = await pool.adjustThreat(message, option)
           break
+        case "sp":
+          embed = await pool.adjustShipPower(message, option)
+          break
         case "beta":
         case "trait":
           embed = await trait.trait(message, option)

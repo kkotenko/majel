@@ -268,13 +268,7 @@ module.exports = {
         guildData[pool].threat = 0;
       }
 
-      if (op === "add") {
-        guildData[pool].threat += amount
-      } else if (op === "sub") {
-        guildData[pool].threat -= amount
-      } else if (op === "set") {
-        guildData[pool].threat = amount
-      }
+      modifyValue(guildData[pool].threat, op, amount)
 
         if (guildData.global.threat < 0 || guildData.global.threat === null) {
           guildData.global.threat = 0
@@ -350,13 +344,7 @@ module.exports = {
         guildData[pool].shippower = 0;
       }
 
-      if (op === "add") {
-        guildData[pool].shippower += amount
-      } else if (op === "sub") {
-        guildData[pool].shippower -= amount
-      } else if (op === "set") {
-        guildData[pool].shippower = amount
-      }
+      modifyValue(guildData[pool].shippower, op, amount)
 
       if (guildData.global.shippower < 0 || guildData.global.shippower === null) {
         guildData.global.shippower = 0

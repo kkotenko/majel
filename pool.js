@@ -46,11 +46,11 @@ module.exports = {
         },
       }
     }
-//TODO: define output
+
     const global = guildData.global
     // making sure global is always first to be displayed
     const embed = {
-      title: "Momentum and Threat Pools",
+      title: "Momentum, Threat and Ship Power Pools",
       fields: [
         {
           name: "Global",
@@ -68,8 +68,8 @@ module.exports = {
       thisChannelOnly = options[1].toLowerCase() === "here"
     } else if (options.length > 0) {
       const op = options[0].toLowerCase()
-      reset = op === "reset"
-      thisChannelOnly = op === "here"
+      reset = op.toLowerCase() === "reset"
+      thisChannelOnly = op.toLowerCase() === "here"
     }
 
     if (reset) {
@@ -78,6 +78,7 @@ module.exports = {
         if (!thisChannelOnly && currentId === "global") {
           guildData.global.momentum = 0
           guildData.global.threat = 0
+          guildData.global.shippower = 0
           continue
         }
 
@@ -105,7 +106,7 @@ module.exports = {
       if (channel) {
         embed.fields.push({
           name: `#${channel.name}`,
-          value: `Momentum: ${channel.momentum}. Threat: ${channel.threat}`,
+          value: `Momentum: ${channel.momentum}. Threat: ${channel.threat}. Ship power: ${channel.shippower}`,
         })
       }
     }
@@ -131,6 +132,7 @@ module.exports = {
         global: {
           momentum: 0,
           threat: 0,
+          shippower: 0,
         },
       }
     }
@@ -139,6 +141,7 @@ module.exports = {
       guildData[channelId] = {
         momentum: 0,
         threat: 0,
+        shippower: 0,
         name: msg.channel.name,
       }
     }

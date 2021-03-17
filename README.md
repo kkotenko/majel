@@ -86,7 +86,7 @@ Support this project: https://www.patreon.com/majeldiscordbot
 
 `!ship attack properties` - Attack properties of a ship attack.
 
-**Momemtum and Threat Pools**
+**Momentum, threat pool and ship power management**
 
 `!pool` - Show the global pool and all channels' pool on server.
 
@@ -96,11 +96,12 @@ Support this project: https://www.patreon.com/majeldiscordbot
 
 `!pool reset here` - Delete this channel's pool.
 
-`!m or !t` - Show the global momentum or threat and the current channel's momentum or threat.
+`!m or !t or !sp` - Show the global momentum/threat/ship power pool and the current channel's momentum/threat/ship power pool
 
-`!m or !t [add, sub, set][some value]` - Add, subtract, or set the momentum or threat to the global pool.
+`!m or !t or !sp` [add, sub, set] [some value] - add, subtract, or set the momentum/threat/ship power to the global pool
 
-`!m or !t [add, sub, set][some value] here` - Add, subtract, or set the momentum or threat to the current channel's pool.
+`!m or !t or !sp` [add, sub, set] [some value] here - add, subtract, or set the momentum/threat/ship power to the current channel's pool.`!m or !t` - Show the global momentum or threat and the current channel's momentum or threat.
+
 
 **Traits**
 

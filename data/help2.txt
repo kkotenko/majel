@@ -1,4 +1,4 @@
-**Momentum and threat pool management.**
+**Momentum, threat pool and ship power management.**
 `!pool` - Show the global pool and all channels' pool on server.
 `!pool here` - Show the global pool and the current channel's pool.
 `!pool reset` - Reset the global pool and delete all other pools on this server.

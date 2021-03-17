@@ -195,6 +195,8 @@ module.exports = {
 
       
       global.momentum.modifyValue(op, amount)
+      global.momentum.ensureUpperBound(6)
+      global.momentum.ensureLowerBound(0)
 
       if (guildData.global.momentum > 6) {
         guildData.global.momentum = 6

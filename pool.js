@@ -21,6 +21,42 @@
 
 const { redis } = require("./redis")
 
+// a pool has:
+// String guildId: the id of the guild
+// String name
+// int value
+// String header: the header to use for the embed
+// int color: the discord.js color to use as the embed color
+// String channelId: the channelId if the pool is local to a channel, "global" otherwise 
+
+class Pool {
+  constructor(guildId, name, value, header, color, channelId) {
+    this.guildId = guildId
+    this.name = name
+    this.value = value
+    this.header = header
+    this.color = color
+    this.channelId = (channelId ? channelId : "global")
+  }
+
+  // ensure lower bound for value
+  // ensure upper bound for value
+
+  modifyValue(op, amount) {
+
+        if (op === "add") {
+          this.value += amount
+        } else if (op === "sub") {
+          this.value -= amount
+        } else if (op === "set") {
+          this.value = amount
+        } else {
+          return false
+        }
+        return true
+  }
+
+}
 module.exports = {
   async status(msg, option) {
     const guildId = msg.guild.id.toString()
@@ -145,7 +181,9 @@ module.exports = {
         name: msg.channel.name,
       }
     }
-
+    // TODO: think about with which value to initialize: prolly sth from guildData
+    global.momentum = new Pool(guildId, "Momentum", 0, "Global", 3447003, "NONE")
+    
     const options = option.split(" ")
 
     let op = ""
@@ -160,13 +198,8 @@ module.exports = {
         pool = channelId
       }
 
-      if (op === "add") {
-        guildData[pool].momentum += amount
-      } else if (op === "sub") {
-        guildData[pool].momentum -= amount
-      } else if (op === "set") {
-        guildData[pool].momentum = amount
-      }
+      
+      global.momentum.modifyValue(op, amount)
 
       if (guildData.global.momentum > 6) {
         guildData.global.momentum = 6

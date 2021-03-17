@@ -306,16 +306,7 @@ module.exports = {
     }
 
     console.warn("get redis", guildId, guildData)
-    if (!guildData || !guildData.global) {
-      console.warn("fixing guildData")
-      guildData = {
-        global: {
-          momentum: 0,
-          threat: 0,
-          shippower: 0,
-        },
-      }
-    }
+    ensureGuildData(guildId)
 
     if (!guildData[channelId]) {
       guildData[channelId] = {

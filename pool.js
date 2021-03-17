@@ -42,6 +42,20 @@ class Pool {
   // ensure lower bound for value
   // ensure upper bound for value
 
+
+  ensureGuildData(guildData) {
+      if (!guildData || !guildData.global) {
+        console.warn("fixing guildData")
+        guildData = {
+          global: {
+            momentum: 0,
+            threat: 0,
+            shippower: 0,
+          },
+        }
+      }
+  }
+
   modifyValue(op, amount) {
 
         if (op === "add") {
@@ -72,16 +86,7 @@ module.exports = {
     }
 
     console.warn("get redis", guildId, guildData)
-    if (!guildData || !guildData.global) {
-      console.warn("fixing guildData")
-      guildData = {
-        global: {
-          momentum: 0,
-          threat: 0,
-          shippower: 0,
-        },
-      }
-    }
+    ensureGuildData(guildData)
 
     const global = guildData.global
     // making sure global is always first to be displayed
@@ -162,17 +167,7 @@ module.exports = {
     }
 
     console.warn("get redis", guildId, guildData)
-    if (!guildData || !guildData.global) {
-      console.warn("fixing guildData")
-      guildData = {
-        global: {
-          momentum: 0,
-          threat: 0,
-          shippower: 0,
-        },
-      }
-    }
-
+    ensureGuildData(guildData)
     if (!guildData[channelId]) {
       guildData[channelId] = {
         momentum: 0,
@@ -242,16 +237,7 @@ module.exports = {
     }
 
     console.warn("get redis", guildId, guildData)
-    if (!guildData || !guildData.global) {
-      console.warn("fixing guildData")
-      guildData = {
-        global: {
-          momentum: 0,
-          threat: 0,
-          shippower: 0,
-        },
-      }
-    }
+    ensureGuildData(guildId)
 
     if (!guildData[channelId]) {
       guildData[channelId] = {

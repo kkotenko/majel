@@ -96,6 +96,7 @@ module.exports = {
     species = this.shuffle(species)
     let race = species[0]
     let gender = this.randomElement(race["Genders"])
+    console.log("picked" + gender)
     let firstName = this.randomElement(race[gender])
     let lastName = this.randomElement(race["Family"])
 
